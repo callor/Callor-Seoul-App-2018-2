@@ -3,7 +3,11 @@ include include/head.pug
 body.w3-container
 	include include/header.pug
 	
-	if !seoul
+	if !body
 		p 서울문화 앱 연습
-	else
+		
+	else if body == 'cult'
 		include seoul.pug
+		
+	else if body == 'pet'
+		include pet.pug

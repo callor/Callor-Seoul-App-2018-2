@@ -1,0 +1,14 @@
+table.w3-table.w3-table-all.w3-hoverable.w3-striped
+	tr
+		th 병원이름
+		th 전화번호
+		th 주소
+	if !seoul
+		tr
+			td(colspan=3) 데이터가 없음
+	else
+		each item, index in seoul
+			tr
+				td= item.NM
+				td= item.TEL
+				td= item.ADDR	
