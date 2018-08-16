@@ -1,0 +1,9 @@
+include include/head.pug
+
+body.w3-container
+	include include/header.pug
+	
+	if !seoul
+		p 서울문화 앱 연습
+	else
+		include seoul.pug

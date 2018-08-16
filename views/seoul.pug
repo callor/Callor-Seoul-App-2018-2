@@ -1,0 +1,23 @@
+style.
+	.w3-card-4 {
+		height:300px;
+		overflow:auto;
+	}
+
+section.w3-row
+	each item, index in seoul
+		article.w3-card-4.w3-col.m3.w3-margin
+			a(href= item.MAIN_IMG, target='_new')
+				img(src= item.MAIN_IMG,width='150')
+			div.caption: b= item.TITLE
+			
+			- var sdate = '시작일:' + item.STRTDATE
+			div.caption= sdate
+			
+			- var edate = '종료일:' + item.END_DATE
+			div.caption= edate
+			
+			- var place ='장소:' + item.PLACE
+			div.caption= place
+			
+			
