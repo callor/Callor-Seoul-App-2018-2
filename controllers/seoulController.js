@@ -45,7 +45,7 @@ module.exports =(app)=>{
 	app.get('/pet',(req,res)=>{
 		
 		let seoul_url = s_url + s_key
-		+ '/json/' + s_pet + '/1/100'
+		+ '/json/' + s_pet + '/1/100/120'
 		
 		request({
 			url : seoul_url,
@@ -64,6 +64,9 @@ module.exports =(app)=>{
 			let data_count = json_data
 				.vtrHospitalInfo
 				.list_total_count
+			
+			console.log(data_count)
+			console.log(data_row)
 			
 			res.render('index',{body:'pet',
 								seoul:data_row})
