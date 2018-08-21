@@ -10,7 +10,7 @@ html(lang='ko')
 		script(src='https://openapi.map.naver.com/openapi/v3/maps.js?clientId=GvRDozDwCAjqxo9JrgjO&submodules=panorama')
 
 style.
-	#naverMap,#pano {
+	#naverMap, #pano {
 		width:100%;
 		height:400px;
 	}
@@ -18,6 +18,7 @@ style.
 body
 	div#naverMap
 	div#pano
+	
 script.
 
 	// 지도를 그릴때 ..maps.LatLng로 되어 있는 부분을
@@ -35,7 +36,6 @@ script.
 		map : 
 			new naver.maps.Map('naverMap',mapConfig)
 	})
-	
 	
 	var pano = new naver.maps.Panorama("pano",
 		{
