@@ -1,0 +1,48 @@
+doctype html
+html(lang='ko')
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width,initial-scale=1')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		
+		title 네이버 지도 표시
+		
+		script(src='https://openapi.map.naver.com/openapi/v3/maps.js?clientId=GvRDozDwCAjqxo9JrgjO&submodules=panorama')
+
+style.
+	#naverMap,#pano {
+		width:100%;
+		height:400px;
+	}
+		
+body
+	div#naverMap
+	div#pano
+script.
+
+	// 지도를 그릴때 ..maps.LatLng로 되어 있는 부분을
+	// 중심으로 그려라
+	var mapConfig = {
+		center : new naver.maps.LatLng(#{point.y},#{point.x}),
+		zoom : 20
+	}
+	
+	// 그 위치에 마커를 표시하라
+	var marker = new naver.maps.Marker({
+		position : 
+			new naver.maps
+				.LatLng(#{point.y}, #{point.x}),
+		map : 
+			new naver.maps.Map('naverMap',mapConfig)
+	})
+	
+	
+	var pano = new naver.maps.Panorama("pano",
+		{
+			position : 	new naver.maps.LatLng(#{point.y}, #{point.x})
+		})
+	
+	
+	
+	
+	

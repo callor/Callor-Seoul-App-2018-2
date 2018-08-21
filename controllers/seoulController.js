@@ -45,7 +45,7 @@ module.exports =(app)=>{
 	app.get('/pet',(req,res)=>{
 		
 		let seoul_url = s_url + s_key
-		+ '/json/' + s_pet + '/1/100'
+		+ '/json/' + s_pet + '/1/1000'
 		
 		request({
 			url : seoul_url,
@@ -65,6 +65,12 @@ module.exports =(app)=>{
 				.vtrHospitalInfo
 				.list_total_count
 			
+			// 실제 추출된 데이터를 확인
+			console.log(data_row)
+			
+			// 데이터 개수가 몇개인가 확인
+			console.log(data_count)
+
 			res.render('index',{body:'pet',
 								seoul:data_row})
 			
